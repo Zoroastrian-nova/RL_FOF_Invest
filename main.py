@@ -49,5 +49,5 @@ def main():
     # 将验证信息导出到CSV文件
     df_valid_info.to_csv("./data/df_valid_info.csv",index=False)
 
-if __name__ == 'main':
+if __name__ == '__main__':
     main()
