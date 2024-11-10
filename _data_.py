@@ -40,14 +40,14 @@ def load_data():
     # 读取股票和债券基金数据, 合并基金数据
     equity_data = pd.read_excel(os.path.join(data_dir, "fund_equity.xlsx"))
     bond_data = pd.read_excel(os.path.join(data_dir, "fund_bond.xlsx"))
-    combined_fund_data = pd.concat((equity_data, bond_data), axis=0)
+    fund_data = pd.concat((equity_data, bond_data), axis=0)
 
     # 清洗数据
-    combined_fund_data.dropna(subset=["代码", "日期", "收盘价(元)"], inplace=True)
-    combined_fund_data.drop_duplicates(inplace=True)
+    fund_data.dropna(subset=["代码", "日期", "收盘价(元)"], inplace=True)
+    fund_data.drop_duplicates(inplace=True)
 
     # 选择特定列并重命名列名
-    selected_columns = combined_fund_data[["代码", "日期", "收盘价(元)"]]
+    selected_columns = fund_data[["代码", "日期", "收盘价(元)"]]
     selected_columns.columns = ["Code", "Date", "Close"]
 
     # 获取交易日期和基金代码
