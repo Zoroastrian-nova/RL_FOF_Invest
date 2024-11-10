@@ -22,6 +22,6 @@ A Project for FOF Investment by RL
      pip install -r requirements.txt
      ```
   4. 运行main.py:
-     ```python
+     ```bash
       python -m main.py
     ```
