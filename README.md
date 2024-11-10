@@ -17,5 +17,11 @@ A Project for FOF Investment by RL
 
 + 复现步骤：
   1. 下载源代码与原始数据
-  2. 安装依赖的包： pip install -r requirements.txt
-  3. 运行main.py: python -m main.py
+  2. 安装依赖的包：
+     ```bash
+     pip install -r requirements.txt
+     ```
+  4. 运行main.py:
+'''python
+  python -m main.py
+'''
