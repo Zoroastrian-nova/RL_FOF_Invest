@@ -149,6 +149,7 @@ class DQNAgent:
         next_states = np.array(next_states)
         
         states = torch.tensor(states, dtype=torch.float32, device=self.device)
+        actions = np.array(actions)
         actions = torch.tensor(actions, dtype=torch.int64, device=self.device)  # 调整为与 states 相同的维度
         rewards = torch.tensor(rewards, dtype=torch.float32, device=self.device).unsqueeze(1)
         next_states = torch.tensor(next_states, dtype=torch.float32, device=self.device)

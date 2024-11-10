@@ -126,6 +126,7 @@ def load_data():
     result_df[["CAPM_beta","SMB_beta","HML_beta"]] = result_df[["CAPM_beta","SMB_beta","HML_beta"]] + 1e-7
     result_df = result_df.fillna(1e-7)
     result_df.to_csv(os.path.join(data_dir, "Fund_Data.csv"))
+    print(f"Data Loaded:{result_df.describe()}")
     return result_df
 
 def handle_missing_values(data):
@@ -206,7 +207,8 @@ def split_data(data):
         train_data.set_index(["Date","Code"],inplace=True)
         valid_data.set_index(["Date","Code"],inplace=True)
 
-
+        print(f"Training Dataset:{train_data.describe()}")
+        print(f"Validation Dataset:{valid_data.describe()}")
         # 返回处理后的数据
         return train_data,valid_data,fund_codes
     

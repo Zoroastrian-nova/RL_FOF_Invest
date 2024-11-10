@@ -3,9 +3,11 @@ import pandas as pd
 from _data_ import load_data, split_data
 from _env_ import MultiFundInvestmentEnv,train
 from _model_ import DQNAgent
+import matplotlib
 
 def main():
     # 检查是否已经下载好了数据
+    matplotlib.use('TkAgg')
     if os.path.exists('./data/Fund_Data.csv'):
         # 如果数据已下载, 则读取本地CSV文件
         data = pd.read_csv('./data/Fund_Data.csv')

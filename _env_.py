@@ -1,5 +1,7 @@
+
 import matplotlib.pyplot as plt
 import matplotlib.ticker as ticker
+
 import numpy as np
 import pandas as pd
 from gym import spaces
@@ -278,8 +280,9 @@ class MultiFundInvestmentEnv:
         ax2.xaxis.set_major_locator(ticker.MaxNLocator(12))
         ax2.set_title('Portfolio Value Over Time')
 
-        plt.legend()
-        plt.show()
+        #plt.legend()
+        plt.show(block=False)
+        plt.pause(5)  # 暂停5秒
         fig.savefig(f"./data/{eps}.png")
 
 
