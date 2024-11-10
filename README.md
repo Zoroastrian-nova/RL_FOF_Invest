@@ -14,3 +14,8 @@ A Project for FOF Investment by RL
 | —— _data_.py: 此处定义了数据的读取与预处理方式，并且将数据分解为训练集样本与验证集样本
 
 | —— _model_.py: 此处定义了DQN模型以及用于模拟基金投资的智能体
+
++ 复现步骤：
+  1. 下载源代码与原始数据
+  2. 安装依赖的包： pip install -r requirements.txt
+  3. 运行main.py: python -m main.py
