@@ -281,8 +281,8 @@ class MultiFundInvestmentEnv:
         ax2.set_title('Portfolio Value Over Time')
 
         #plt.legend()
-        plt.show(block=False)
-        plt.pause(5)  # 暂停5秒
+        #plt.show(block=False)
+
         fig.savefig(f"./data/{eps}.png")
 
 
